@@ -1,0 +1,10 @@
+services:
+  adk:
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./.env:/app/.env
+      - .:/app
+    command: tail -f /dev/null
